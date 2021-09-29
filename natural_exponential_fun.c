@@ -14,16 +14,14 @@ main()
         printf("Input the last tern:");
         scanf("%d", &n);
         
-        int factorial = 1;
-        double xpow = 1.0;
+        double term = 1.0;
 
         for (int i = 1; i <= n; i++) {
-            factorial *= i;
-            xpow *= x;
-            e += xpow / factorial;
+            term *= (x/i);
+            e += term;
         }
 
-        printf("%lf\n", e);
+        printf("%.20f\n", e);
 
         printf("Do you want to input another x? (1:yes, 0:no)");
         scanf("%d", &run);
